@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#死循环，这个脚本需要一直运行检测状态
+
+mblue=0
+myellow=0
+#等待wan口上线
+sleep 60s
+ 
+while true;do
+
+ ret_code=`curl -I -s --connect-timeout 5 www.baidu.com -w %{http_code} | tail -n1`
+#偶尔失败？奇怪的问题
+ if [ "x$ret_code" != "x200" ]; then
+    ret_code=`curl -I -s --connect-timeout 5 k3c.paldier.tk -w %{http_code} | tail -n1`
+ fi
+ if [ "x$ret_code" = "x200" ]; then
+  if [ "$mblue" = "0" ]; then
+  mblue=1
+  myellow=0
+  echo "0" > /sys/class/leds/power/brightness;
+  echo "0" > /sys/class/leds/sys/brightness;
+  echo "1" > /sys/class/leds/internet/brightness;
+  fi
+ else
+  if [ "$myellow" = "0" ]; then
+  myellow=1
+  mblue=0
+  echo "0" > /sys/class/leds/power/brightness;
+  echo "1" > /sys/class/leds/sys/brightness;
+  echo "0" > /sys/class/leds/internet/brightness;
+  fi
+ fi
+ sleep 30s
+done
+

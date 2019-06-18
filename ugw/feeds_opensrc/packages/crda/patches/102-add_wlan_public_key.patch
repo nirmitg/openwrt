@@ -1,0 +1,12 @@
+--- a/pubkeys/wlan.key.pub.pem
++++ b/pubkeys/wlan.key.pub.pem
+@@ -0,0 +1,9 @@
++-----BEGIN PUBLIC KEY-----
++MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0G5ZUmSg1xocplMRxU74
++n78qR3rGwXIVRGAd13zyJJklviLdZqQ6oYf1Lw2I/T96l0dcHS7jhDQcOumAXSin
++K8xBiPNPccx+/OTob+2mi6kdg5yGHdyJc2CXQlOVww7gNt9EFxWh09Fo1K4vHb7Q
++CxangVETjsUnTwuVcQk0a0gDanflbIrd37khsKGdJnWFoiTPwSef7SCDfmZarSAw
++y7OuvZ8q/fEr22j0NznTnGR4TJosgLeA0E5f7h9bLpvmEggmS0QbdappNfoIZkiF
++W/c34i/hLHz7QdRn2miyzuuJpoOaAdrprPWRSzUCE7n/+PNhXPJzPk47rXAPeOtW
++6QIDAQAB
++-----END PUBLIC KEY-----
