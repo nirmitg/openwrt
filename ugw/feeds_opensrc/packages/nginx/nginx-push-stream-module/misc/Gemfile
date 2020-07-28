@@ -12,7 +12,7 @@ group :test do
   gem 'listen', '~> 0.7.2'
   gem 'rb-inotify', '~> 0.9.4', :require => RUBY_PLATFORM.include?('linux') && 'rb-inotify'
   gem 'rb-fsevent', '~> 0.9', :require => RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
-  gem 'json', '~> 1.8.1'
+  gem 'json', '~> 2.3.0'
   gem 'thin', '~> 1.5.1'
   gem 'net-http-persistent', '~> 2.9', :require => 'net/http/persistent'
 
