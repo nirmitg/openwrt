@@ -4,7 +4,7 @@ gem 'rake', '~> 10.0.3'
 
 group :test do
   gem 'rspec', '~> 2.14.1'
-  gem 'em-http-request', '~> 1.0.3'
+  gem 'em-http-request', '~> 1.1.6'
   gem 'nginx_test_helper', '~> 0.3.0'
   gem 'jshintrb', '~> 0.2.1'
   gem 'therubyracer'
